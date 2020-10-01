@@ -3,6 +3,7 @@ import { Alert } from 'react-native';
 import Loading from "./Loading"
 import * as Location from "expo-location"
 import axios from "axios"
+import Weather from "./Weather"
 
 // npm install " " Error => npm update
 
@@ -21,13 +22,16 @@ export default class extends React.Component {
   }
 
   getWeather = async(latitude, longitude)=> {
-    // axios는 data를 줌
+    // axios는 data를 기본 지급
     // weather api의 url에 lat, long, apikey 삽입시 나오는 데이터 끌고 옴
-    const { data } = await axios.get(
+
+    // data의 main > temp 항목
+    const { data: {main : {temp}, weather} } = await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}&units=metric`
     )
-    console.log(data)
-    console.log("end")
+    // 모든 데이터 로드시
+    this.setState({isLoading: false, temp, condition: weather[0].main})
+    console.log("getWeather!")
   }
 
   getLocation = async ()=> {
@@ -39,8 +43,6 @@ export default class extends React.Component {
       console.log(`https://www.google.co.kr/maps/place/${latitude},${longitude}?hl=ko`)
 
       this.getWeather(latitude,longitude)
-      this.setState({isLoading : false})
-      // Send to API and get weather
     }catch(error){
       Alert.alert("Can`t find you.", "It`s Javascript Error.")
     }  
@@ -51,7 +53,7 @@ export default class extends React.Component {
   }
  
   render(){
-    const { isLoading } = this.state 
-    return isLoading ? <Loading /> : null
+    const { isLoading, temp, condition } = this.state 
+    return isLoading ? <Loading /> : <Weather temp={temp} condition={condition} />
   }
 }
