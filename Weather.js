@@ -15,67 +15,67 @@ const weatherOptions = {
         iconName: "weather-lightning-rainy",
         gradient: ["#373B44", "4286f4"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "It's rainy. Take your umbrella."
     },
     Drizzle:{
         iconName: "weather-hail",
         gradient: ["#89F7FE", "#66A6FF"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "It's rainy. Take your umbrella."
     },
     Rain:{
         iconName: "weather-rainy",
         gradient: ["#4776E6", "#8E54E9"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "It's rainy. Take your umbrella."
     },
     Snow:{
         iconName: "weather-snowy",
         gradient: ["#7DE2FC", "#B9B6E5"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "It's snowy. You can go outside."
     },
     Clear:{
         iconName: "weather-sunny",
         gradient: ["#FF7300", "#FEF253"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "Clear! You can go outside."
     },
     Atmosphere:{
         iconName: "weather-hail",
         gradient: ["#89F7FE", "#66A6FF"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "The atmosphere is cloudy. Take your umbrella."
     },
     Mist:{
         iconName: "weather-hail",
         gradient: ["#5C258D", "#757F9A"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "The atmosphere is cloudy. Take your umbrella."
     },
     Smoke:{
         iconName: "weather-cloudy",
         gradient: ["#D7DDE8", "#757F9A"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "The atmosphere is cloudy. Take your umbrella."
     },
     Haze:{
         iconName: "weather-hail",
         gradient: ["#5C258D", "#757F9A"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "It's rainy. Take your umbrella."
     },
     Dust:{
         iconName: "weather-hail",
         gradient: ["#5C258D", "#757F9A"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."
+        subtitle: "It's rainy. Take your umbrella."
     },
     Tornado: {
         iconName: "weather-hurricane",
         gradient: ["#D7DDE8", "#757F9A"],
         title: "Weather Situation Notification",
-        subtitle: "It's cloudy. You can go outside."    
+        subtitle: "Don't go out because it's dangerous."    
     }
 }
 
